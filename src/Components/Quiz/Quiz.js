@@ -12,12 +12,13 @@ const Quiz = () => {
   
   return (
     <div>
-      <h2 className='text-center'> Quiz Topic {quizz.name}</h2>
+      <h2 className="text-center"> Quiz Topic {quizz.name}</h2>
       <div className=" Quiz-container w-3/4 p-4 ">
         {manyQues.map((ques) => (
           <Question key={ques.id} ques={ques}></Question>
         ))}
       </div>
+  
     </div>
   );
 };
