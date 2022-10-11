@@ -5,30 +5,39 @@ import Main from './Layouts/Main';
 import Home from './Components/Home/Home';
 import Statistic from './Components/Statistic/Statistic';
 import Blog from './Components/Blog/Blog';
+import Topics from './Components/Home/Topics';
+import { DataLoaders } from './Components/DataLoaders/DataLoaders';
+
 
 function App() {
   const router = createBrowserRouter([
     {
-      path: '/',
+      path: "/",
       element: <Main></Main>,
       children: [
         {
-          path: '/',
-          element:<Home></Home>
-        },
-        
-        {
-          path: '/statistic',
-          element:<Statistic></Statistic>
+          path: "/",
+          loader: async () =>fetch("https://openapi.programming-hero.com/api/quiz"),
+          
+          element: <Home></Home>,
         },
         {
-          path: '/blog',
-          element:<Blog></Blog>
-        }
-      ]
-}
+          path: "/topics",
 
-  ])
+          element: <Topics></Topics>,
+        },
+
+        {
+          path: "/statistic",
+          element: <Statistic></Statistic>,
+        },
+        {
+          path: "/blog",
+          element: <Blog></Blog>,
+        },
+      ],
+    },
+  ]);
   return (
     <div>
       <RouterProvider
