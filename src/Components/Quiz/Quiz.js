@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Question from './Question';
+import './Quiz.css'
 
 const Quiz = () => {
   const quizzData = useLoaderData()
@@ -11,8 +12,8 @@ const Quiz = () => {
   
   return (
     <div>
-      <h2> Quiz Topic {quizz.name}</h2>
-      <div className="grid grid-cols-1 justify-center items-center ">
+      <h2 className='text-center'> Quiz Topic {quizz.name}</h2>
+      <div className=" Quiz-container w-3/4 p-4 ">
         {manyQues.map((ques) => (
           <Question key={ques.id} ques={ques}></Question>
         ))}
