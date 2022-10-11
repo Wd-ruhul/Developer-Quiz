@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = () => {
   return (
-    <div className="h-48 bg-gradient-to-r from-violet-500 to-fuchsia-500 p-5">
+    <div className="h-48 bg-gradient-to-r from-sky-500 to-indigo-500 p-5">
       <h2 className="text-neutral-200 font-bold text-center text-4xl font-sans	">
         Developer Quiz
       </h2>

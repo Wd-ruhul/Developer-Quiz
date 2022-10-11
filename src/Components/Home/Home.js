@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <div className="grid justify-center md:grid-cols-4">
+      <div className="grid justify-center md:grid-cols-4 gap-8 p-5">
         {topics.map((topic) => (
           <Topics key={topic.id} topic={topic}></Topics>
         ))}
