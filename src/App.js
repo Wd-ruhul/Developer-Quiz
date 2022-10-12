@@ -26,11 +26,11 @@ function App() {
         {
           path: "/topic/:topicId",
           loader: async ({ params }) => {
-            return  fetch(
+            return fetch(
               `https://openapi.programming-hero.com/api/quiz/${params.topicId}`
-            )
+            );
           },
-           
+
           element: <Quiz></Quiz>,
         },
         {
@@ -41,6 +41,8 @@ function App() {
 
         {
           path: "/statistic",
+          loader: async () =>
+            fetch("https://openapi.programming-hero.com/api/quiz"),
           element: <Statistic></Statistic>,
         },
         {
