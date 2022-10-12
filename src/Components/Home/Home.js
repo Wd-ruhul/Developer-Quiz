@@ -1,26 +1,12 @@
-
-import { useLoaderData } from 'react-router-dom';
+import React from "react";
 import Banner from './Banner'
-import Topics from './Topics';
-
-
+import Topics from "../Topics/Topics";
 
 const Home = () => {
-
-  const topicsData = useLoaderData();
-  const topics = topicsData.data;
- 
-  console.log("tp", topics);
-
-
   return (
     <div>
       <Banner></Banner>
-      <div className="grid justify-center md:grid-cols-4 gap-8 p-5">
-        {topics.map((topic) => (
-          <Topics key={topic.id} topic={topic}></Topics>
-        ))}
-      </div>
+      <Topics></Topics>
     </div>
   );
 };
