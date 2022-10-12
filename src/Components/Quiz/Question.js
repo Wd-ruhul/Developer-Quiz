@@ -25,7 +25,7 @@ const Question = ({ ques }) => {
     <div className="  bg-indigo-300  mb-5 p-5 border-2 border-indigo-900 rounded">
       <p className="text-center">{question}</p>
       <EyeIcon onClick={tostify} className="h-6 w-6"></EyeIcon>
-      <div className="grid grid-cols-2 ">
+      <div className="grid md:grid-cols-2 ">
         <label className="border-2 border-indigo-900 rounded p-3 text-center mr-3 mb-3">
           <input
             onClick={(e) => notify(e.target.value)}
@@ -38,7 +38,7 @@ const Question = ({ ques }) => {
           <span>{options[0]}</span>
         </label>
 
-        <label className="border-2 border-amber-900 rounded p-3 text-center mb-3 ">
+        <label className="border-2 border-indigo-900  rounded p-3 text-center mb-3 ">
           <input
             onClick={(e) => notify(e.target.value)}
             value={options[1]}

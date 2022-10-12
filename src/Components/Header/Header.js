@@ -5,7 +5,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 const Header = () => {
   const [open, setOpen] = useState(false)
   return (
-    <nav className="bg-indigo-900 text-neutral-200 font-bold p-5 border-b border-amber-400  ">
+    <nav className="bg-indigo-900 text-neutral-200  font-bold p-5 border-b border-amber-400  ">
       <div onClick={() => setOpen(!open)} className="h-6 w-6 md:hidden">
         {open ? <XMarkIcon /> : <Bars3Icon />}
       </div>
@@ -14,7 +14,7 @@ const Header = () => {
           open ? "top-6" : "top-[-120px]"
         }`}
       >
-        <li>
+        <li className=''>
           <NavLink
             className={({ isActive }) =>
               isActive ? "text-amber-400" : undefined

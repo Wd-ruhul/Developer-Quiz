@@ -6,7 +6,7 @@ const Topics = (props) => {
   console.log('id',id)
   return (
     <div className="text-neutral-200 bg-gradient-to-r from-cyan-500 to-blue-500 h-64 w-60 rounded p-5 hover:mix-blend-multiply bg-pink-400">
-      <img className="w-40 h-40" src={logo} alt="" />
+      <img className="w-40 h-40 mb-2" src={logo} alt="" />
       <div className="flex justify-between">
         <h1>{name}</h1>
         <p>total: {total}</p>
@@ -14,7 +14,7 @@ const Topics = (props) => {
       <p className="flex justify-center">
         <Link
           to={`/topic/${id}`}
-          className="bg-gradient-to-r from-violet-500 to-fuchsia-500 px-3 rounded hover:bg-indigo-900"
+          className="bg-gradient-to-r from-violet-500 to-fuchsia-500 px-3 rounded hover:bg-indigo-900 mt-2"
         >
           Start Quiz
         </Link>
