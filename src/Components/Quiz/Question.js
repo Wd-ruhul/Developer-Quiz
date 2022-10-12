@@ -10,14 +10,14 @@ const Question = ({ ques }) => {
 
   const notify = (e) => {
     if (e === correctAnswer) {
-      toast("Wow  Right!");
+      toast.success("Wow  Right Answer!");
     } else {
-      toast("Wrong Answer");
+      toast.warn("Ops! Wrong Answer");
     }
   }
 
   const tostify = () => {
-    toast(` ${ correctAnswer }`)
+    toast(`Right Answer : ${ correctAnswer }`)
 
   }
 
@@ -70,7 +70,7 @@ const Question = ({ ques }) => {
           <span>{options[3]}</span>
         </label>
       </div>
-      <ToastContainer />
+      <ToastContainer position="top-center" />
     </div>
   );
 };

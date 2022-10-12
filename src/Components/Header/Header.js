@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 const Header = () => {
@@ -15,16 +15,44 @@ const Header = () => {
         }`}
       >
         <li>
-          <Link to="/">Home</Link>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-amber-400" : undefined
+            }
+            to="/"
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/topics">Topics</Link>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-amber-400" : undefined
+            }
+            to="/topics"
+          >
+            Topics
+          </NavLink>
         </li>
         <li>
-          <Link to="/statistic">Statistic</Link>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-amber-400" : undefined
+            }
+            to="/statistic"
+          >
+            Statistic
+          </NavLink>
         </li>
         <li>
-          <Link to="/blog">Blog</Link>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-amber-400" : undefined
+            }
+            to="/blog"
+          >
+            Blog
+          </NavLink>
         </li>
       </ul>
     </nav>
